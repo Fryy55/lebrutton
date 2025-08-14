@@ -11,6 +11,72 @@
 	"version": "v1.0.0",
 	"developer": "Fryy_55",
 	"description": "the bronze age",
+	"resources": {
+		"spritesheets": {
+			"ThePrawnBaySheet": [
+				"resources/sheets/the-prawn-bay/*.png"
+			]
+		},
+		"files": [
+			"resources/sfx/*.mp3"
+		]
+	},
+	"settings": {
+		"lebrutton-title": {
+			"type": "title",
+			"name": "Lebrutton Settings"
+		},
+		"lebrutton-text": {
+			"type": "bool",
+			"name": "Print Text",
+			"description": "Prints <cy>lebron</c> upon clicking <cc>le Lebrutton</c> <cb>(only in the editor!!!)</c>\n<c-303030>also copies <c-4d4d00>lebron</c> to clipboard but that's <c-505050>not</c> only in the editor</c>",
+			"default": true
+		},
+		"lebrutton-sound": {
+			"type": "bool",
+			"name": "Play Sound",
+			"description": "Plays the <cj>\"The John Jay\" vine sound</c> upon clicking <cc>le Lebrutton</c>",
+			"default": true
+		},
+		"lebrutton-pic": {
+			"type": "bool",
+			"name": "Show Picture",
+			"description": "Shows the <co>sunshine picture</c> upon clicking <cc>le Lebrutton</c>",
+			"default": true
+		},
+
+		"general-title": {
+			"type": "title",
+			"name": "General Settings"
+		},
+		"general-main-menu": {
+			"type": "bool",
+			"name": "Show In Main Menu",
+			"description": "<cg>Enables</c>/<cr>disables</c> <cc>le Lebrutton</c> in the main menu",
+			"default": true,
+			"enable-if": "saved:keyrings-on",
+			"enable-if-description": "How would you use le Lebrutton if you have no keyrings?"
+		},
+
+		"keyring-title": {
+			"type": "title",
+			"name": "Keyring Settings"
+		},
+		"keyring-toggle-repeat": {
+			"type": "bool",
+			"name": "Toggle Repeat",
+			"description": "Custom ~Keybinds~ Keyrings is [stupid](user:10929123), so you need to manually set if the keyring <cf>repeats</c> when you hold it down or <cr>not</c> here",
+			"default": false,
+			"requires-restart": true,
+			"enable-if": "saved:keyrings-on",
+			"enable-if-description": "You have no keyrings, why would you toggle this?"
+		},
+		"keyring-button": {
+			"type": "custom:geode.custom-keybinds/open-menu",
+			"enable-if": "saved:keyrings-on",
+			"enable-if-description": "No keyrings - nothing to open!"
+		}
+	},
 	"tags": [
 		"offline",
 		"joke"
@@ -20,6 +86,9 @@
 		"community": "https://discord.com/invite/4vqtjfdhTk"
 	},
 	"dependencies": {
-		
+		"geode.custom-keybinds": {
+			"version": ">=v1.10.4",
+			"importance": "required"
+		}
 	}
 }
