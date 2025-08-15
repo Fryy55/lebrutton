@@ -23,7 +23,7 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE
         ${SRC_DIR}/events
         ${SRC_DIR}/types
-        ${SRC_DIR}/types/general-purpose/settingsV3
+        ${SRC_DIR}/types/general-purpose
 )
 
 if (NOT DEFINED ENV{GEODE_SDK})

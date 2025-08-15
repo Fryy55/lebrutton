@@ -43,6 +43,12 @@
 			"description": "Shows the <co>sunshine picture</c> upon clicking <cc>le Lebrutton</c>",
 			"default": true
 		},
+		"lebrutton-edit": {
+			"type": "bool",
+			"name": "Open Edit",
+			"description": "Opens an <ca>epic edit</c> with a <cb>1% chance</c> upon clicking <cc>le Lebrutton</c>",
+			"default": false
+		},
 
 		"general-title": {
 			"type": "title",

@@ -2,6 +2,7 @@
 
 #include "SunshineEvent.hpp"
 #include "SunshineJumpscare.hpp"
+#include "utils/random.hpp"
 
 using namespace geode::prelude;
 
@@ -42,6 +43,11 @@ $on_mod(Loaded) {
 
 		if (Mod::get()->getSettingValue<bool>("lebrutton-pic")) {
 			SunshineJumpscare::create()->show();
+		}
+
+		if (Mod::get()->getSettingValue<bool>("lebrutton-edit")) {
+			if (utils::random(1, 100) == 55)
+				utils::web::openLinkInBrowser("https://www.youtube.com/watch?v=_g0Bx6o58aE");
 		}
 
 		return ListenerResult::Stop;

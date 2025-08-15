@@ -1,6 +1,6 @@
 #include <Geode/Geode.hpp>
 
-#include "WideTitleV3.hpp"
+#include "settingsV3/WideTitleV3.hpp"
 
 using namespace geode::prelude;
 
