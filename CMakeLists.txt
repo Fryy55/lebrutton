@@ -23,6 +23,7 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE
         ${SRC_DIR}/events
         ${SRC_DIR}/types
+        ${SRC_DIR}/types/general-purpose/settingsV3
 )
 
 if (NOT DEFINED ENV{GEODE_SDK})
@@ -40,6 +41,7 @@ else()
     # My everything fails to download :broken_heart:
     setup_geode_mod(${PROJECT_NAME}
         EXTERNALS
+            geode.node-ids
             geode.custom-keybinds
     )
 endif()

@@ -3,8 +3,7 @@
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
-		"mac": "2.2074",
-		"ios": "2.2074"
+		"mac": "2.2074"
 	},
 	"id": "fryy_55.lebrutton",
 	"name": "Lebrutton",
@@ -51,7 +50,7 @@
 		},
 		"general-main-menu": {
 			"type": "bool",
-			"name": "Show In Main Menu",
+			"name": "Main Menu Button",
 			"description": "<cg>Enables</c>/<cr>disables</c> <cc>le Lebrutton</c> in the main menu",
 			"default": true,
 			"enable-if": "saved:keyrings-on",
@@ -71,10 +70,12 @@
 			"enable-if": "saved:keyrings-on",
 			"enable-if-description": "You have no keyrings, why would you toggle this?"
 		},
-		"keyring-button": {
-			"type": "custom:geode.custom-keybinds/open-menu",
+		"keyring-wide-title": {
+			"type": "custom:wide-title",
+			"name": "Go to game settings to change keyrings!!!",
+			"padding": 25,
 			"enable-if": "saved:keyrings-on",
-			"enable-if-description": "No keyrings - nothing to open!"
+			"enable-if-description": "Don't listen!!! No keyrings - nothing to open!"
 		}
 	},
 	"tags": [
@@ -86,6 +87,10 @@
 		"community": "https://discord.com/invite/4vqtjfdhTk"
 	},
 	"dependencies": {
+		"geode.node-ids": {
+			"version": ">=1.21.1",
+			"importance": "required"
+		},
 		"geode.custom-keybinds": {
 			"version": ">=v1.10.4",
 			"importance": "required"

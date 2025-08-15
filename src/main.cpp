@@ -2,6 +2,7 @@
 
 #include "geode.custom-keybinds/include/Keybinds.hpp"
 
+#include "WideTitleV3.hpp"
 #include "SunshineEvent.hpp"
 #include "SunshineJumpscare.hpp"
 
@@ -10,6 +11,9 @@ using namespace keybinds;
 
 
 $on_mod(Loaded) {
+	// settings
+	(void)Mod::get()->registerCustomSettingType("wide-title", WideTitleV3::parse);
+
 	// my events
 	new EventListener<EventFilter<SunshineEvent>>(+[](SunshineEvent*) {
 		if (Mod::get()->getSettingValue<bool>("lebrutton-text")) {

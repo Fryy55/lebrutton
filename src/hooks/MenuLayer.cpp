@@ -17,7 +17,9 @@ class $modify(MenuLayer) {
 		auto lebrutton = CCMenuItemExt::createSpriteExtra(
 			CircleButtonSprite::createWithSpriteFrameName(
 				"sunshine-small.png"_spr,
-				1.f
+				1.f,
+				CircleBaseColor::Green,
+				CircleBaseSize::MediumAlt
 			),
 			[](CCMenuItemSpriteExtra*) {
 				SunshineEvent().post();
