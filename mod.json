@@ -56,6 +56,22 @@
 			"enable-if": "saved:keyrings-on",
 			"enable-if-description": "How would you use le Lebrutton if you have no keyrings?"
 		},
+		"general-pause-menu": {
+			"type": "bool",
+			"name": "Pause Menu Button",
+			"description": "<cg>Enables</c>/<cr>disables</c> <cc>le Lebrutton</c> in the pause menu",
+			"default": false,
+			"enable-if": "saved:keyrings-on",
+			"enable-if-description": "How would you use le Lebrutton if you have no keyrings?"
+		},
+		"general-editor-pause-menu": {
+			"type": "bool",
+			"name": "Editor Pause Menu Button",
+			"description": "<cg>Enables</c>/<cr>disables</c> <cc>le Lebrutton</c> in the editor pause menu",
+			"default": false,
+			"enable-if": "saved:keyrings-on",
+			"enable-if-description": "How would you use le Lebrutton if you have no keyrings?"
+		},
 
 		"keyring-title": {
 			"type": "title",
